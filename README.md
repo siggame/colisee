@@ -13,7 +13,7 @@
 ### Colisee Services
 |Service|Description|CI|
 |---|---|---|
-|[siggame/colisee-db](https://github.com/siggame/colisee-db)|asdf|[![Travis](https://img.shields.io/travis/siggame/colisee-db.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-db) |
+|[siggame/colisee-db](https://github.com/siggame/colisee-db)|asdf|[![Travis](https://img.shields.io/travis/siggame/colisee-db.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-db)|
 |[siggame/colisee-builder](https://github.com/siggame/colisee-builder)|asdf|[![Travis](https://img.shields.io/travis/siggame/colisee-builder.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-builder)|
 |[siggame/colisee-matchmaker](https://github.com/siggame/colisee-matchmaker)|asdf|[![Travis](https://img.shields.io/travis/siggame/colisee-matchmaker.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-matchmaker)|
 |[siggame/colisee-tournament](https://github.com/siggame/colisee-tournament)|asdf|[![Travis](https://img.shields.io/travis/siggame/colisee-tournament.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-tournament)|
@@ -25,5 +25,5 @@
 |---|---|---|
 |[siggame/registre](https://github.com/siggame/registre)|asdf|[![Travis](https://img.shields.io/travis/siggame/colisee-registre.svg?style=flat-square)](https://travis-ci.org/siggame/registre)|
 |[siggame/tourneyjs](https://github.com/siggame/tourneyjs)|asdf|[![Travis](https://img.shields.io/travis/siggame/tourneyjs.svg?style=flat-square)](https://travis-ci.org/siggame/tourneyjs)|
-|[siggame/discordbot](https://github.com/siggame/discordbot)|asdf| |
+|[siggame/discordbot](https://github.com/siggame/discordbot)|asdf||
 
