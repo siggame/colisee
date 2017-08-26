@@ -21,9 +21,9 @@
 |[siggame/colisee-visapi](https://github.com/siggame/colisee-visapi)|Service that provides endpoints to interact with the SIG-Game visualizer.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-visapi.svg?style=flat-square)](http://github.com/siggame/colisee-visapi)|[![Travis](https://img.shields.io/travis/siggame/colisee-visapi.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-visapi)|
 
 ### Other Services
-|Service|Description|CI|
-|---|---|---|
-|[siggame/registre](https://github.com/siggame/registre)|Simple web application that records registration data in a simple CSV format.|[![Travis](https://img.shields.io/travis/siggame/colisee-registre.svg?style=flat-square)](https://travis-ci.org/siggame/registre)|
-|[siggame/tourneyjs](https://github.com/siggame/tourneyjs)|JavaScript utility that abstracts tournament algorithms into their own generic code base.|[![Travis](https://img.shields.io/travis/siggame/tourneyjs.svg?style=flat-square)](https://travis-ci.org/siggame/tourneyjs)|
-|[siggame/discordbot](https://github.com/siggame/discordbot)|Discord Bot that aids in SIG-Game Discord operations.||
+|Service|Description|Issues|CI|
+|---|---|---|---|
+|[siggame/registre](https://github.com/siggame/registre)|Simple web application that records registration data in a simple CSV format.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/registre.svg?style=flat-square)](http://github.com/siggame/registre)|[![Travis](https://img.shields.io/travis/siggame/colisee-registre.svg?style=flat-square)](https://travis-ci.org/siggame/registre)|
+|[siggame/tourneyjs](https://github.com/siggame/tourneyjs)|JavaScript utility that abstracts tournament algorithms into their own generic code base.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/tourneyjs.svg?style=flat-square)](http://github.com/siggame/tourneyjs)|[![Travis](https://img.shields.io/travis/siggame/tourneyjs.svg?style=flat-square)](https://travis-ci.org/siggame/tourneyjs)|
+|[siggame/discordbot](https://github.com/siggame/discordbot)|Discord Bot that aids in SIG-Game Discord operations.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/discord-bot.svg?style=flat-square)](http://github.com/siggame/discord-bot)||
 
