@@ -1,6 +1,6 @@
 # Contributing
 
-Normally, ACM SIG-Game devs will be doing the majority of the contributing, but we love contributions from the open source community.
+Normally, ACM SIG-Game devs will be doing the majority of the contributing, but we love contributions from the open source community. Feel free to submit pull requests and the project maintainer will take a look at it as soon as they can.
 
 ## Table Of Contents
 - [General](#general)
@@ -13,7 +13,7 @@ Normally, ACM SIG-Game devs will be doing the majority of the contributing, but 
 - Prefer 4 space indents
 
 ## Git
-- Prefer branching over forking; especially if a member of ACM SIG-Game
+- Prefer branching over forking if a member of ACM SIG-Game
 - Prefer adding individually over `git commit -A`
  
 ## JavaScript
