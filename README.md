@@ -5,7 +5,8 @@
 - [Services](#services)
   - [Colisee](#colisee-services)
   - [Other](#other-services)
-- Docker On R99
+- [Common Sources](#common-sources)
+  - [db.ts](#dbts)
 
 ## Description
 
@@ -27,3 +28,7 @@
 |[siggame/tourneyjs](https://github.com/siggame/tourneyjs)|JavaScript utility that abstracts tournament algorithms into their own generic code base.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/tourneyjs.svg?style=flat-square)](http://github.com/siggame/tourneyjs)|[![Travis](https://img.shields.io/travis/siggame/tourneyjs.svg?style=flat-square)](https://travis-ci.org/siggame/tourneyjs)|
 |[siggame/discordbot](https://github.com/siggame/discordbot)|Discord Bot that aids in SIG-Game Discord operations.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/discordbot.svg?style=flat-square)](http://github.com/siggame/discordbot)||
 
+## Common Sources
+In the `src/common` folder are some files that we would prefer to see stay the same between all our services.
+
+### db.ts
