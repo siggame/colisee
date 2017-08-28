@@ -27,6 +27,7 @@
 |[siggame/registre](https://github.com/siggame/registre)|Simple web application that records registration data in a simple CSV format.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/registre.svg?style=flat-square)](http://github.com/siggame/registre)|[![Travis](https://img.shields.io/travis/siggame/colisee-registre.svg?style=flat-square)](https://travis-ci.org/siggame/registre)|
 |[siggame/tourneyjs](https://github.com/siggame/tourneyjs)|JavaScript utility that abstracts tournament algorithms into their own generic code base.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/tourneyjs.svg?style=flat-square)](http://github.com/siggame/tourneyjs)|[![Travis](https://img.shields.io/travis/siggame/tourneyjs.svg?style=flat-square)](https://travis-ci.org/siggame/tourneyjs)|
 |[siggame/discordbot](https://github.com/siggame/discordbot)|Discord Bot that aids in SIG-Game Discord operations.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/discordbot.svg?style=flat-square)](http://github.com/siggame/discordbot)||
+|[siggame/stockage](https://github.com/siggame/stockage)|Common API for interacting with Cloud storages and local FS.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/stockage.svg?style=flat-square)](http://github.com/siggame/stockage)|[![Travis](https://img.shields.io/travis/siggame/stockage.svg?style=flat-square)](https://travis-ci.org/siggame/stockage)|
 
 ## Common Sources
 In the `src/common` folder are some files that we would prefer to see stay the same between all our services.
