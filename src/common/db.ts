@@ -5,8 +5,14 @@
  */
 
 import * as Knex from "knex";
+import * as _ from "lodash";
 
 import * as vars from "../vars";
+
+// Node Environment
+const NODE_ENV: string = _.defaultTo<string>(process.env.NODE_ENV, "development");
+const IS_DEVELOPMENT: boolean = NODE_ENV === "development";
+const IS_PRODUCTION: boolean = NODE_ENV === "production";
 
 // Table Constants
 export const TEAMS_TABLE = "teams";
@@ -14,10 +20,12 @@ export const SUBMISSIONS_TABLE = "submissions";
 export const GAMES_TABLE = "games";
 export const GAME_SUBMISSIONS_TABLE = "games_submission"
 
+// Statuses lists
 export const TEAM_SUBMISSIONS_STATUSES = [ "queued", "building", "finished", "failed" ];
 export const GAME_STATUSES = [ "queued", "playing", "finished" ];
 
-export const connection = (vars.NODE_ENV === "development" ? buildDevelopmentConnection() : buildProductionConnection());
+// Main KNEX connection
+export const connection = (NODE_ENV === "development" ? buildDevelopmentConnection() : buildProductionConnection());
 
 function buildDevelopmentConnection(): Knex {
     return Knex({
@@ -41,7 +49,7 @@ function buildProductionConnection(): Knex {
     });
 }
 export async function initializeDatabase(force: boolean = false): Promise<void> {
-    if(vars.IS_PRODUCTION) throw new Error("Cannot initialize database on production unless force=true.");
+    if(IS_PRODUCTION) throw new Error("Cannot initialize database on production unless force=true.");
 
     // Drop All Tables
     const dropAll = [
