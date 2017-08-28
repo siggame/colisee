@@ -6,10 +6,9 @@
   - [Colisee](#colisee-services)
   - [Other](#other-services)
 - [Common Sources](#common-sources)
-- [Contributors](#contributors)
 - [License](https://github.com/siggame/colisee/blob/master/LICENSE.md)
+- [Contributors](#contributors)
 - [Contributing](https://github.com/siggame/colisee/blob/master/CONTRIBUTING.md)
-
 
 ## Description
 
