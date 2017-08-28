@@ -6,7 +6,10 @@
   - [Colisee](#colisee-services)
   - [Other](#other-services)
 - [Common Sources](#common-sources)
-  - [db.ts](#dbts)
+- [Contributors](#contributors)
+- [License](https://github.com/siggame/colisee/blob/master/LICENSE.md)
+- [Contributing](https://github.com/siggame/colisee/blob/master/CONTRIBUTING.md)
+
 
 ## Description
 
@@ -32,4 +35,5 @@
 ## Common Sources
 In the `src/common` folder are some files that we would prefer to see stay the same between all our services.
 
-### db.ts
+## Contributors
+- [Russley Shaw](https://github.com/russleyshaw)
