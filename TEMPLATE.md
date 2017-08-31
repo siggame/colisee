@@ -9,40 +9,26 @@ A brief description of the project.
 ## Table Of Contents
 - [Description](#description)
 - [Getting Started](#getting-started)
-- [API](#api)
-- [License](https://github.com/siggame/colisee/blob/master/LICENSE.md)
+- [Usage](#usage)
+- [License](#license)
 - [Contributors](#contributors)
-- [Contributing](https://github.com/siggame/colisee/blob/master/CONTRIBUTING.md)
+- [Contributing](#contributing)
 
 ## Description
 
 A long description of the project.
 
-## Getting Started IF_REST_SERVICE
+## Usage
 
-### Locally
-```
-git clone CLONE_URL_HERE
-cd PROJECT
-npm run setup
-npm run build
-npm run start
-```
+Information about how to use the service or library.
 
-### Docker
-```
-docker pull siggame/PROJECT
-docker run --detach siggame/PROJECT
-```
+## License
 
-## Getting Started IF_MODULE
-```
-// show basic examples here
-```
-
-## API
-
-Show each major REST endpoint or module
+View our [LICENSE.md](https://github.com/siggame/colisee/blob/master/LICENSE.md)
 
 ## Contributors
 - [Russley Shaw](https://github.com/russleyshaw)
+
+## Contributing
+
+View our [CONTRIBUTING.md](https://github.com/siggame/colisee/blob/master/CONTRIBUTING.md)
