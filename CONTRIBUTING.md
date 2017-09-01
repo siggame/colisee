@@ -44,6 +44,8 @@ Normally, ACM SIG-Game devs will be doing the majority of the contributing, but 
 - Prefer promises over callbacks
 - Prefer brackets on same line as control structure `if(foo) {` over seperate line `if(foo)\n{`
 - Prefer libraries with large numbers of downloads. Don't choose a package with <200k downloads/month
+- Rarely should you make a functional distinction between `undefined` and `null`
+- Use an `isNil` function (from lodash, or other) to check if a value is undefined or null. 
 
 ## TypeScript
 - Prefer async/await over promises
