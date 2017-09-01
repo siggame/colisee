@@ -2,18 +2,17 @@
 
 ## Table Of Contents
 - [Description](#description)
-- [Services](#services)
-  - [Colisee](#colisee-services)
-  - [Other](#other-services)
-- [Common Sources](#common-sources)
-- [License](https://github.com/siggame/colisee/blob/master/LICENSE.md)
+- [Products](#products)
+  - [Services](#services)
+  - [Modules](#modules)
 - [Contributors](#contributors)
-- [Contributing](https://github.com/siggame/colisee/blob/master/CONTRIBUTING.md)
+- [License](#license)
+- [Contributing](#contributing)
 
 ## Description
 
-## Services
-### Colisee Services
+## Products
+### Services
 |Service|Description|Issues|CI|
 |---|---|---|---|
 |[siggame/colisee-db](https://github.com/siggame/colisee-db)|Database to hold any persistent data needed for Arena & Web operation.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-db.svg?style=flat-square)](http://github.com/siggame/colisee-db)|[![Travis](https://img.shields.io/travis/siggame/colisee-db.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-db)|
@@ -22,17 +21,23 @@
 |[siggame/colisee-tournament](https://github.com/siggame/colisee-tournament)|Service which schedules game in a tournament fashion.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-tournament.svg?style=flat-square)](http://github.com/siggame/colisee-tournament)|[![Travis](https://img.shields.io/travis/siggame/colisee-tournament.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-tournament)|
 |[siggame/colisee-runner](https://github.com/siggame/colisee-runner)|Service which dequeues scheduled games off the database and plays them.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-runner.svg?style=flat-square)](http://github.com/siggame/colisee-runner)|[![Travis](https://img.shields.io/travis/siggame/colisee-runner.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-runner)|
 |[siggame/colisee-visapi](https://github.com/siggame/colisee-visapi)|Service that provides endpoints to interact with the SIG-Game visualizer.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-visapi.svg?style=flat-square)](http://github.com/siggame/colisee-visapi)|[![Travis](https://img.shields.io/travis/siggame/colisee-visapi.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-visapi)|
-
-### Other Services
-|Service|Description|Issues|CI|
-|---|---|---|---|
 |[siggame/registre](https://github.com/siggame/registre)|Simple web application that records registration data in a simple CSV format.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/registre.svg?style=flat-square)](http://github.com/siggame/registre)|[![Travis](https://img.shields.io/travis/siggame/colisee-registre.svg?style=flat-square)](https://travis-ci.org/siggame/registre)|
-|[siggame/tourneyjs](https://github.com/siggame/tourneyjs)|JavaScript utility that abstracts tournament algorithms into their own generic code base.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/tourneyjs.svg?style=flat-square)](http://github.com/siggame/tourneyjs)|[![Travis](https://img.shields.io/travis/siggame/tourneyjs.svg?style=flat-square)](https://travis-ci.org/siggame/tourneyjs)|
 |[siggame/discordbot](https://github.com/siggame/discordbot)|Discord Bot that aids in SIG-Game Discord operations.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/discordbot.svg?style=flat-square)](http://github.com/siggame/discordbot)||
-|[siggame/stockage](https://github.com/siggame/stockage)|Common API for interacting with Cloud storages and local FS.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/stockage.svg?style=flat-square)](http://github.com/siggame/stockage)|[![Travis](https://img.shields.io/travis/siggame/stockage.svg?style=flat-square)](https://travis-ci.org/siggame/stockage)|
 
-## Common Sources
-In the `src/common` folder are some files that we would prefer to see stay the same between all our services.
+### Modules
+|Module|Description|Issues|CI|
+|---|---|---|---|
+|[siggame/tourneyjs](https://github.com/siggame/tourneyjs)|JavaScript utility that abstracts tournament algorithms into their own generic code base.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/tourneyjs.svg?style=flat-square)](http://github.com/siggame/tourneyjs)|[![Travis](https://img.shields.io/travis/siggame/tourneyjs.svg?style=flat-square)](https://travis-ci.org/siggame/tourneyjs)|
+|[siggame/stockage](https://github.com/siggame/stockage)|Common API for interacting with Cloud storages and local FS.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/stockage.svg?style=flat-square)](http://github.com/siggame/stockage)|[![Travis](https://img.shields.io/travis/siggame/stockage.svg?style=flat-square)](https://travis-ci.org/siggame/stockage)|
 
 ## Contributors
 - [Russley Shaw](https://github.com/russleyshaw)
+- [User404d](https://github.com/user404d)
+
+## License
+
+View our [LICENSE.md](https://github.com/siggame/colisee/blob/master/LICENSE.md)
+
+## Contributing
+
+View our [CONTRIBUTING.md](https://github.com/siggame/colisee/blob/master/CONTRIBUTING.md)
