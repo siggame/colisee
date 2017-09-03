@@ -57,6 +57,8 @@ Normally, ACM SIG-Game devs will be doing the majority of the contributing, but 
 - Rarely should you make a functional distinction between `undefined` and `null`
 - Use an `isNil` function (from lodash, or other) to check if a value is undefined or null. 
 - Include documentation for every major exported function and class.
+- If module/library, main entry point should be named `index`.
+- If service/application, main entry point should be named `app`.
 
 ## TypeScript
 - Prefer async/await over promises
