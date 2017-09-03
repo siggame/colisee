@@ -13,6 +13,7 @@ Normally, ACM SIG-Game devs will be doing the majority of the contributing, but 
 - Prefer 4 space indents
 - New repos should be connected with Travis CI
 - New service/API repos should be connected to DockerHub
+- README should contain as many applicable badges as possible. Remove non-applicable ones.
 
 ## GitHub
 - Prefer Markdown files over wiki
@@ -27,6 +28,14 @@ Normally, ACM SIG-Game devs will be doing the majority of the contributing, but 
     - `type/housekeeping` - The project/documentation needs to be updated
     - `type/discussion` - Issue thread for discussing the project, (includes feature requests)
     - `type/bug` - Old code needs to be fixed
+
+## NPM
+- If project is published to NPM:
+  - use the @siggame org scope. Example `npm install @siggame/colisee-lib`
+  - include **all** non-essential files in the `.npmignore` except for `README.md`
+  - build code out of source into a `dist` folder.
+  - make sure `main: dist/index` is added (without the .js extension) 
+  - add a `types: dist/index` to package.json for linking to typing information.
 
 ## Git
 - Prefer branching over forking if a member of ACM SIG-Game
