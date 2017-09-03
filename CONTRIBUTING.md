@@ -45,7 +45,7 @@ Normally, ACM SIG-Game devs will be doing the majority of the contributing, but 
 - `stable` should be after master can confidently be used in production
 - personal development branches should be used to "save your work" to the cloud without writing to master
 - personal development branches follow the pattern `personal/INITIALS/DESCRIPTION`. For example `personal/rfs/dbfix`
-- only major version changes should be tagged
+- Commit version increments seperately.
  
 ## JavaScript
 - Prefer lambdas `()=>{}` over scoped anonymous functions `function(){}`
