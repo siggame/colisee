@@ -14,7 +14,7 @@ A brief description of the project.
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributors](#contributors)
-- [Changelog](#changelog)
+- [Change Log](#change-log)
 - [License](#license)
 - [Contributing](#contributing)
 
@@ -36,7 +36,7 @@ Information about how to use the service or library.
 - [Hannah Reinbolt](https://github.com/LoneGalaxy)
 - [Matthew Qualls](https://github.com/MatthewQualls)
 
-## Changelog
+## Change Log
 
 View our [CHANGELOG.md](https://github.com/siggame/YOUR_PROJECT_HERE/blob/master/CHANGELOG.md)
 
