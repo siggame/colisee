@@ -6,6 +6,7 @@
   - [Services](#services)
   - [Modules](#modules)
 - [Contributors](#contributors)
+- [Change Log](#change-log)
 - [License](#license)
 - [Contributing](#contributing)
 
@@ -30,12 +31,17 @@
 |[siggame/tourneyjs](https://github.com/siggame/tourneyjs)|JavaScript utility that abstracts tournament algorithms into their own generic code base.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/tourneyjs.svg?style=flat-square)](http://github.com/siggame/tourneyjs)|[![Travis](https://img.shields.io/travis/siggame/tourneyjs.svg?style=flat-square)](https://travis-ci.org/siggame/tourneyjs)|
 |[siggame/stockage](https://github.com/siggame/stockage)|Common API for interacting with Cloud storages and local FS.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/stockage.svg?style=flat-square)](http://github.com/siggame/stockage)|[![Travis](https://img.shields.io/travis/siggame/stockage.svg?style=flat-square)](https://travis-ci.org/siggame/stockage)|
 |[siggame/colisee-tslint](https://github.com/siggame/colisee-tslint)|Official Colisee TSLint configuration.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-tslint.svg?style=flat-square)](http://github.com/siggame/colisee-tslint)||
+|[siggame/colisee-lib](https://github.com/siggame/colisee-lib)|Collection of common Colisee modules.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-lib.svg?style=flat-square)](http://github.com/siggame/colisee-lib)||
 
 ## Contributors
 - [Russley Shaw](https://github.com/russleyshaw)
 - [user404d](https://github.com/user404d)
 - [Hannah Reinbolt](https://github.com/LoneGalaxy)
 - [Matthew Qualls](https://github.com/MatthewQualls)
+
+## Change Log
+
+This repo does not have a specific change log as it is a living document. Please refer to specific projects for their change logs.
 
 ## License
 
