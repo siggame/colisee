@@ -55,6 +55,7 @@ Normally, ACM SIG-Game devs will be doing the majority of the contributing, but 
 - Prefer libraries with large numbers of downloads. Don't choose a package with <200k downloads/month
 - Rarely should you make a functional distinction between `undefined` and `null`
 - Use an `isNil` function (from lodash, or other) to check if a value is undefined or null. 
+- Include documentation for every major exported function and class.
 
 ## TypeScript
 - Prefer async/await over promises
