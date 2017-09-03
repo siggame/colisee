@@ -14,6 +14,7 @@ A brief description of the project.
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributors](#contributors)
+- [Changelog](#changelog)
 - [License](#license)
 - [Contributing](#contributing)
 
@@ -23,7 +24,7 @@ A long description of the project.
 
 ## Getting Started
 
-How to get the service or library.
+How to get/install the service or library.
 
 ## Usage
 
@@ -34,6 +35,10 @@ Information about how to use the service or library.
 - [user404d](https://github.com/user404d)
 - [Hannah Reinbolt](https://github.com/LoneGalaxy)
 - [Matthew Qualls](https://github.com/MatthewQualls)
+
+## Changelog
+
+View our [CHANGELOG.md](https://github.com/siggame/YOUR_PROJECT_HERE/blob/master/CHANGELOG.md)
 
 ## License
 
