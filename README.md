@@ -12,6 +12,10 @@
 
 ## Description
 
+This is the main project page for colisee and colisee related projects.
+
+The story board for colisee can be found [here](https://github.com/orgs/siggame/projects/1).
+
 ## Products
 ### Services
 |Service|Description|Issues|CI|
