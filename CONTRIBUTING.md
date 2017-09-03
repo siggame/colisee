@@ -46,6 +46,7 @@ Normally, ACM SIG-Game devs will be doing the majority of the contributing, but 
 - personal development branches should be used to "save your work" to the cloud without writing to master
 - personal development branches follow the pattern `personal/INITIALS/DESCRIPTION`. For example `personal/rfs/dbfix`
 - Commit version increments seperately.
+- The initial commit should be tagged with a `v0.0.0`
  
 ## JavaScript
 - Prefer lambdas `()=>{}` over scoped anonymous functions `function(){}`
