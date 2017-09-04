@@ -4,6 +4,9 @@
   "description": "",
   "main": "src/app",
   "scripts": {
+    "start": "node src/app.js",
+    "start-prod": "NODE_ENV=production node src/app.js",
+    "start-dev": "npm run build && node src/app.js",
     "setup": "npm install",
     "test": "npm run build && mocha test/unit test/integration",
     "build": "tsc",
