@@ -1,0 +1,45 @@
+{
+  "name": "@siggame/YOUR_PROJECT_HERE",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index",
+  "types": "dist/index",
+  "scripts": {
+    "setup": "npm install",
+    "test": "npm run build && mocha test/unit/",
+    "build": "tsc",
+    "build-watch": "tsc --watch",
+    "build-dist": "tsc -p tsconfig.dist.json",
+    "clean": "npm run clean:src && npm run clean:test && npm run clean:misc",
+    "clean:src": "rimraf src/**/*.js src/*.js",
+    "clean:test": "rimraf test/**/*.js test/*.js",
+    "clean:misc": "rimraf dist/ node_modules/",
+    "lint": "tslint --format verbose --project ./tsconfig.json",
+    "lint-fix": "tslint --fix --format verbose --project ./tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siggame/YOUR_PROJECT_HERE.git"
+  },
+  "author": "siggame@mst.edu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siggame/YOUR_PROJECT_HERE/issues"
+  },
+  "homepage": "https://github.com/siggame/YOUR_PROJECT_HERE#readme",
+  "devDependencies": {
+    "@siggame/colisee-tslint": "^1.0.3",
+    "@types/chai": "^4.0.4",
+    "@types/lodash": "^4.14.74",
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^8.0.25",
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "rimraf": "^2.6.1",
+    "tslint": "^5.7.0",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
