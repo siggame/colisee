@@ -3,7 +3,7 @@
 A brief description of the project.
 
 [![Travis](https://img.shields.io/travis/siggame/YOUR_PROJECT_HERE.svg?style=flat-square)](https://travis-ci.org/siggame/YOUR_PROJECT_HERE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/siggame/YOUR_PROJECT_HERE/.svg?style=flat-square)](https://hub.docker.com/r/siggame/YOUR_PROJECT_HERE/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/siggame/YOUR_PROJECT_HERE.svg?style=flat-square)](https://hub.docker.com/r/siggame/YOUR_PROJECT_HERE/)
 [![GitHub Tag](https://img.shields.io/github/tag/siggame/YOUR_PROJECT_HERE.svg?style=flat-square)](https://github.com/siggame/YOUR_PROJECT_HERE/tags)
 [![Dependencies](https://img.shields.io/david/siggame/YOUR_PROJECT_HERE.svg)](https://github.com/siggame/YOUR_PROJECT_HERE)
 [![NPM Version](https://img.shields.io/npm/@siggame/YOUR_PROJECT_HERE.svg?style=flat-square)](https://www.npmjs.com/package/@siggame/YOUR_PROJECT_HERE)
