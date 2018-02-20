@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  runner:
+    image: siggame/colisee-runner:latest
+    env_file: ./envs/runner
+    ports:
+      - "127.0.0.1:8083:8080/tcp"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/tmp/storage/runner:/app/output"
+  game_server:
+    image: siggame/cerveau:arena
+    volumes:
+      - "/tmp/storage/game_server:/usr/src/app/game_server/output/gamelogs"
+  builder:
+    image: siggame/colisee-builder:latest
+    env_file: ./envs/builder
+    ports:
+      - "127.0.0.1:8081:8080/tcp"
+    volumes:
+      - "/tmp/storage/builder:/app/output"
+  api:
+    image: siggame/colisee-api:latest
+    env_file: ./envs/api
+    ports:
+      - "127.0.0.1:8080:8080/tcp"
+    volumes:
+      - "/tmp/storage:/app/storage:ro"
+  matchmaker:
+    image: siggame/colisee-matchmaker:latest
+    env_file: ./envs/matchmaker
+    ports:
+      - "127.0.0.1:8082:8080/tcp"
+  tournament:
+    image: siggame/colisee-tournament:latest
+    env_file: ./envs/tournament
+    ports:
+      - "127.0.0.1:8084:8080"
+  registry:
+    image: registry:latest
+    ports:
+      - "127.0.0.1:5000:5000"
+  db:
+    image: siggame/colisee-db:latest
+    ports:
+      - "127.0.0.1:5432:5432"
