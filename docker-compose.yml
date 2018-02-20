@@ -19,6 +19,7 @@ services:
     ports:
       - "127.0.0.1:8081:8080/tcp"
     volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
       - "/tmp/storage/builder:/app/output"
   api:
     image: siggame/colisee-api:latest
