@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  local:
+    image: registry:latest
+    env_file: ../envs/registry
+    ports:
+      - "127.0.0.1:${REGISTRY_PORT}:${REGISTRY_PORT}"
+    volumes:
+      - "${STORAGE_BASE}/registry:/var/lib/registry"
