@@ -37,11 +37,13 @@ services:
     image: siggame/colisee-tournament:latest
     env_file: ./envs/tournament
     ports:
-      - "127.0.0.1:8084:8080"
+      - "127.0.0.1:8084:8080/tcp"
   registry:
     image: registry:latest
     ports:
       - "127.0.0.1:5000:5000"
+    volumes:
+      - "/tmp/storage/registry:/var/lib/registry"
   db:
     image: siggame/colisee-db:latest
     ports:

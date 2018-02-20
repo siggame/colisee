@@ -1,5 +1,6 @@
 api
 builder
 matchmaker
+registry
 runner
 tournament
