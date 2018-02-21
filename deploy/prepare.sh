@@ -15,6 +15,7 @@ for env_template in deploy/envs/*.template; do
     service=$(echo "$env" | cut -d'/' -f 3)
     test -d "$STORAGE_BASE/$service" || mkdir -p "$STORAGE_BASE/$service"
     envsubst < $env_template > $env
+    echo -e "DB_HOST=$DB_HOST\nDB_PORT=$DB_PORT\nDB_USER=$DB_USER\nDB_PASSWORD=$DB_PASSWORD\nDB_NAME=$DB_NAME" >> $env
 done
 
 echo "pulling images"
