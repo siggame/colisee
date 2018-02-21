@@ -12,3 +12,6 @@ for env_template in deploy/envs/*.template; do
     test -d "$STORAGE_BASE/$service" || mkdir -p "$STORAGE_BASE/$service"
     envsubst < $env_template > $env
 done
+
+echo "pulling images"
+docker-compose pull
