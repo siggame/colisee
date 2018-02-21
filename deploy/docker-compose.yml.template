@@ -45,6 +45,13 @@ services:
     env_file: ./deploy/envs/tournament
     ports:
       - "127.0.0.1:${TOURNAMENT_PORT}:8080/tcp"
+  registry:
+    image: registry:latest
+    env_file: ./deploy/envs/registry
+    ports:
+      - "127.0.0.1:${REGISTRY_PORT}:${REGISTRY_PORT}"
+    volumes:
+      - "${STORAGE_BASE}/registry:/var/lib/registry"
   ${DB_HOST}:
     image: siggame/colisee-db:latest
     ports:
