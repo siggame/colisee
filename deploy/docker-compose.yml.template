@@ -34,7 +34,9 @@ services:
     ports:
       - "127.0.0.1:${API_PORT}:8080/tcp"
     volumes:
-      - "${STORAGE_BASE}:/app/storage:ro"
+      - "${STORAGE_BASE}/game_server:/app/storage/game_server:ro"
+      - "${STORAGE_BASE}/runner:/app/storage/runner:ro"
+      - "${STORAGE_BASE}/builder:/app/storage/builder:ro"
   matchmaker:
     image: siggame/colisee-matchmaker:latest
     env_file: ./deploy/envs/matchmaker
@@ -53,9 +55,8 @@ services:
     volumes:
       - "${STORAGE_BASE}/registry:/var/lib/registry"
   ${DB_HOST}:
-    image: siggame/colisee-db:latest
-    ports:
-      - "127.0.0.1:${DB_PORT}:${DB_PORT}"
+    image: alpine/socat:latest
+    command: tcp-listen:${DB_PORT},fork,reuseaddr tcp:${WEB_ADDR}:${DB_PORT}
   reverse_proxy:
     build:
       context: ./deploy/nginx
