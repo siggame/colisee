@@ -1,5 +1,9 @@
 #!/bin/bash -ae
 
+echo "preparing letsencrypt"
+mkdir -p deploy/letsencrypt/certs deploy/letsencrypt/certs-data
+echo "(remember to run use letsencrypt/gen_certs.sh)"
+
 echo "generating docker compose resources"
 echo "creating colisee docker compose"
 source deploy/.env
@@ -15,3 +19,5 @@ done
 
 echo "pulling images"
 docker-compose pull
+echo "building images"
+docker-compose build

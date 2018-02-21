@@ -56,5 +56,14 @@ services:
     image: siggame/colisee-db:latest
     ports:
       - "127.0.0.1:${DB_PORT}:${DB_PORT}"
+  reverse_proxy:
+    build:
+      context: ./deploy/nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - "./deploy/letsencrypt/certs:/etc/letsencrypt:ro"
+      - "./deploy/letsencrypt/certs-data:/data/letsencrypt:ro"
 networks:
   ${GAME_SERVER_NETWORK}:
