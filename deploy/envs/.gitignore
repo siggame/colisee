@@ -1,5 +1,6 @@
 api
 builder
+game_server
 matchmaker
 registry
 runner
