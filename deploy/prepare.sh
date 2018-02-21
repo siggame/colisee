@@ -4,8 +4,6 @@ echo "generating docker compose resources"
 echo "creating colisee docker compose"
 source deploy/.env
 envsubst < deploy/docker-compose.yml.template > docker-compose.yml
-echo "creating registry docker compose"
-envsubst < deploy/registry/docker-compose.yml.template > deploy/registry/docker-compose.yml
 
 echo "creating service env files"
 for env_template in deploy/envs/*.template; do
