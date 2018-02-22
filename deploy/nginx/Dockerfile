@@ -1,5 +1,5 @@
 FROM nginx:latest
 
-COPY ./conf/arena.siggame.io.conf /etc/nginx/conf.d/default.conf
+COPY conf /etc/nginx/conf.d
 
 EXPOSE 80 443
