@@ -1,32 +1,34 @@
 {
-  "name": "@siggame/YOUR_PROJECT_HERE",
+  "name": "@siggame/${PROJECT_NAME}",
   "version": "0.0.0",
-  "description": "",
-  "main": "dist/index",
-  "types": "dist/index",
+  "description": "${PROJECT_DESCRIPTION}",
+  "main": "lib",
+  "types": "lib",
   "scripts": {
-    "setup": "npm install",
-    "test": "npm run build && mocha test/unit/",
     "build": "tsc",
-    "build-watch": "tsc --watch",
-    "build-dist": "tsc -p tsconfig.dist.json",
+    "build:dist": "tsc -p tsconfig.dist.json",
+    "build:watch": "tsc --watch",
     "clean": "npm run clean:src && npm run clean:test && npm run clean:misc",
+    "clean:misc": "rimraf lib/ node_modules/",
     "clean:src": "rimraf src/**/*.js src/*.js",
     "clean:test": "rimraf test/**/*.js test/*.js",
-    "clean:misc": "rimraf dist/ node_modules/",
     "lint": "tslint --format verbose --project ./tsconfig.json",
-    "lint-fix": "tslint --fix --format verbose --project ./tsconfig.json"
+    "lint:fix": "tslint --fix --format verbose --project ./tsconfig.json",
+    "setup": "npm install",
+    "prepublishOnly": "npm install && npm run test && npm run build:dist",
+    "pretest": "npm run build",
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siggame/YOUR_PROJECT_HERE.git"
+    "url": "git+https://github.com/siggame/${PROJECT_NAME}.git"
   },
   "author": "siggame@mst.edu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/siggame/YOUR_PROJECT_HERE/issues"
+    "url": "https://github.com/siggame/${PROJECT_NAME}/issues"
   },
-  "homepage": "https://github.com/siggame/YOUR_PROJECT_HERE#readme",
+  "homepage": "https://github.com/siggame/${PROJECT_NAME}#readme",
   "devDependencies": {
     "@siggame/colisee-tslint": "^1.0.3",
     "@types/chai": "^4.0.4",

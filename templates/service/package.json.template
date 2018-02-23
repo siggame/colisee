@@ -1,33 +1,35 @@
 {
-  "name": "@siggame/YOUR_PROJECT_HERE",
+  "name": "@siggame/${PROJECT_NAME}",
   "version": "0.0.0",
-  "description": "",
-  "main": "src/app",
+  "description": "${PROJECT_DESCRIPTION}",
+  "main": "release",
   "scripts": {
-    "start": "node src/app.js",
-    "start-prod": "NODE_ENV=production node src/app.js",
-    "start-dev": "npm run build && node src/app.js",
+    "prestart": "npm run build",
+    "start": "node src",
+    "start:prod": "NODE_ENV=production node release",
     "setup": "npm install",
-    "test": "npm run build && mocha test/unit test/integration",
+    "pretest": "npm run build",
+    "test": "mocha test",
     "build": "tsc",
-    "build-watch": "tsc --watch",
+    "build:watch": "tsc --watch",
+    "build:dist": "tsc -p tsconfig.dist.json",
     "clean": "npm run clean:src && npm run clean:test && npm run clean:misc",
     "clean:src": "rimraf src/**/*.js src/*.js",
     "clean:test": "rimraf test/**/*.js test/*.js",
-    "clean:misc": "rimraf dist/ node_modules/",
+    "clean:misc": "rimraf release/ node_modules/",
     "lint": "tslint --format verbose --project ./tsconfig.json",
-    "lint-fix": "tslint --fix --format verbose --project ./tsconfig.json"
+    "lint:fix": "tslint --fix --format verbose --project ./tsconfig.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siggame/YOUR_PROJECT_HERE.git"
+    "url": "git+https://github.com/siggame/${PROJECT_NAME}.git"
   },
   "author": "siggame@mst.edu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/siggame/YOUR_PROJECT_HERE/issues"
+    "url": "https://github.com/siggame/${PROJECT_NAME}/issues"
   },
-  "homepage": "https://github.com/siggame/YOUR_PROJECT_HERE#readme",
+  "homepage": "https://github.com/siggame/${PROJECT_NAME}#readme",
   "devDependencies": {
     "@siggame/colisee-tslint": "^1.0.3",
     "@types/chai": "^4.0.4",
