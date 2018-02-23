@@ -8,7 +8,7 @@ from re import search, sub
 from sys import exit
 from shutil import copyfile
 
-Template = namedtuple("Tempalte", ["project_name", "project_desc"])
+Template = namedtuple("Template", ["project_name", "project_desc"])
 
 TEMPLATED_VALUES = Template(r"${PROJECT_NAME}", r"${PROJECT_DESCRIPTION}")
 
