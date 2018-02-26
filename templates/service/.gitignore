@@ -11,4 +11,4 @@ node_modules/
 *.d.ts
 
 docs/
-${PROJECT_TYPE_OUTPUT}/
+release/

@@ -1,16 +1,14 @@
+#!/usr/bin/env python3 -Bu
+
 from __future__ import print_function
 
 from argparse import ArgumentParser
-from collections import namedtuple
 from os import listdir, mkdir
 from os.path import basename, curdir, exists, isfile, join
 from re import search
+from shutil import copy
+from string import Template
 from sys import exit
-from shutil import copyfile
-
-Template = namedtuple("Template", ["project_name", "project_desc"])
-
-TEMPLATED_VALUES = Template(r"${PROJECT_NAME}", r"${PROJECT_DESCRIPTION}")
 
 parser = ArgumentParser(
     prog="colisee-project",
@@ -41,21 +39,21 @@ while description == "":
         print("Invalid resposne of {}. Expected (y/n).".format(response))
         exit(1)
 
+substitutions = {"PROJECT_NAME": args.name, "PROJECT_DESCRIPTION": description}
 project = join(curdir, args.name)
 mkdir(project)
 
-contents = [join("common", file) for file in listdir("common")
-           ] + [join(args.type, file) for file in listdir(args.type)]
+contents = [join("common", file) for file in listdir("common")]
+contents += [join(args.type, file) for file in listdir(args.type)]
 
-for file in contents:
-    is_template = search(r"(.*)\.template", file)
+for content in contents:
+    is_template = search(r"(.*)\.template", content)
     if is_template is None:
-        copyfile(file, join(project, basename(file)))
+        copy(content, join(project, basename(content)))
     else:
-        with open(file, 'r') as template, open(
-                join(project, basename(is_template.group(1))), 'w') as asset:
-            for line in template:
-                for replacement in [(TEMPLATED_VALUES.project_name, args.name), \
-                                    (TEMPLATED_VALUES.project_desc, description)]:
-                    line = line.replace(*replacement)
-                print(line, end='', file=asset)
+        lines = []
+        with open(content, "r") as src:
+            lines = [Template(line) for line in src]
+        with open(join(project, basename(is_template.group(1))), "w") as dest:
+            for line in lines:
+                dest.write(line.safe_substitute(**substitutions))
