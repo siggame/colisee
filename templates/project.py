@@ -39,7 +39,11 @@ while description == "":
         print("Invalid resposne of {}. Expected (y/n).".format(response))
         exit(1)
 
-substitutions = {"PROJECT_NAME": args.name, "PROJECT_DESCRIPTION": description}
+substitutions = {
+    "owner": "siggame",
+    "project_name": args.name,
+    "project_description": description
+}
 project = join(curdir, args.name)
 mkdir(project)
 

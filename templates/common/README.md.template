@@ -1,13 +1,13 @@
-# siggame/${PROJECT_NAME}
+# siggame/${project_name}
 
-${PROJECT_DESCRIPTION}.
+${project_description}.
 
-[![Travis](https://img.shields.io/travis/siggame/${PROJECT_NAME}.svg?style=flat-square)](https://travis-ci.org/siggame/${PROJECT_NAME})
-[![Docker Pulls](https://img.shields.io/docker/pulls/siggame/${PROJECT_NAME}.svg?style=flat-square)](https://hub.docker.com/r/siggame/${PROJECT_NAME}/)
-[![GitHub Tag](https://img.shields.io/github/tag/siggame/${PROJECT_NAME}.svg?style=flat-square)](https://github.com/siggame/${PROJECT_NAME}/tags)
-[![Dependencies](https://img.shields.io/david/siggame/${PROJECT_NAME}.svg)](https://github.com/siggame/${PROJECT_NAME})
-[![NPM Version](https://img.shields.io/npm/@siggame/${PROJECT_NAME}.svg?style=flat-square)](https://www.npmjs.com/package/@siggame/${PROJECT_NAME})
-[![NPM Total Downloads](https://img.shields.io/npm/dt/@siggame/${PROJECT_NAME}.svg?style=flat-square)](https://www.npmjs.com/package/@siggame/${PROJECT_NAME})
+[![Travis](https://img.shields.io/travis/siggame/${project_name}.svg?style=flat-square)](https://travis-ci.org/siggame/${project_name})
+[![Docker Pulls](https://img.shields.io/docker/pulls/siggame/${project_name}.svg?style=flat-square)](https://hub.docker.com/r/siggame/${project_name}/)
+[![GitHub Tag](https://img.shields.io/github/tag/siggame/${project_name}.svg?style=flat-square)](https://github.com/siggame/${project_name}/tags)
+[![Dependencies](https://img.shields.io/david/siggame/${project_name}.svg)](https://github.com/siggame/${project_name})
+[![NPM Version](https://img.shields.io/npm/@siggame/${project_name}.svg?style=flat-square)](https://www.npmjs.com/package/@siggame/${project_name})
+[![NPM Total Downloads](https://img.shields.io/npm/dt/@siggame/${project_name}.svg?style=flat-square)](https://www.npmjs.com/package/@siggame/${project_name})
 
 ## Table Of Contents
 
@@ -40,7 +40,7 @@ Information about how to use the service or library.
 
 ## Change Log
 
-View our [CHANGELOG.md](https://github.com/siggame/${PROJECT_NAME}/blob/master/CHANGELOG.md)
+View our [CHANGELOG.md](https://github.com/siggame/${project_name}/blob/master/CHANGELOG.md)
 
 ## License
 
