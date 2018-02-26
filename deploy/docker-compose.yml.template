@@ -70,3 +70,4 @@ services:
       # - "./deploy/letsencrypt/certs-data:/data/letsencrypt:ro"
 networks:
   ${GAME_SERVER_NETWORK}:
+    internal: true
