@@ -40,7 +40,7 @@
 - From the root directory run `./deploy/prepare.sh`
 - Verify the generated files:
   - Check `docker-compose.yml`
-  - Check each environment file in [deploy/envs](deploy/envs)
+  - Check each environment file in [deploy/envs](../deploy/envs)
     - Ignore env files with `.template` extension
   - If any values need to be changed or added do so now
 - From the root directory run `./deploy/up.sh`
