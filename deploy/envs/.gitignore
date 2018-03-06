@@ -4,4 +4,6 @@ game_server
 matchmaker
 registry
 runner
+secure-build
+secure-runtime
 tournament

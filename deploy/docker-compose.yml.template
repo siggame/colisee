@@ -1,37 +1,12 @@
 version: '3'
 
 services:
-  runner:
-    image: siggame/colisee-runner:latest
-    ports:
-      - "127.0.0.1:${RUNNER_PORT}:8080/tcp"
-    volumes:
-      - "./deploy/envs/runner:/app/.env:ro"
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - "${STORAGE_BASE}/runner:/app/output"
-  ${GAME_SERVER_HOST}:
-    image: siggame/cerveau:arena
-    volumes:
-      - "${STORAGE_BASE}/game_server:/usr/src/app/game_server/output/gamelogs"
-    networks:
-      default:
-        aliases:
-          - ${GAME_SERVER_HOST}
-      ${GAME_SERVER_NETWORK}:
-        aliases:
-          - ${GAME_SERVER_HOST}
-  builder:
-    image: siggame/colisee-builder:latest
-    env_file: ./deploy/envs/builder
-    ports:
-      - "127.0.0.1:${BUILDER_PORT}:8080/tcp"
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - "./deploy/envs/builder:/app/.env:ro"
-      - "${STORAGE_BASE}/builder:/app/output"
   api:
     image: siggame/colisee-api:latest
-    env_file: ./deploy/envs/api
+    networks:
+      ingress:
+        aliases:
+          - api
     ports:
       - "127.0.0.1:${API_PORT}:8080/tcp"
     volumes:
@@ -39,35 +14,133 @@ services:
       - "${STORAGE_BASE}/game_server:/app/storage/game_server:ro"
       - "${STORAGE_BASE}/runner:/app/storage/runner:ro"
       - "${STORAGE_BASE}/builder:/app/storage/builder:ro"
-  matchmaker:
-    image: siggame/colisee-matchmaker:latest
-    env_file: ./deploy/envs/matchmaker
+  builder:
+    image: siggame/colisee-builder:latest
+    networks:
+      builder-docker:
+      client-registry:
+      db-builder:
+      ingress:
+        aliases:
+          - builder
     ports:
-      - "127.0.0.1:${MATCHMAKER_PORT}:8080/tcp"
-  tournament:
-    image: siggame/colisee-tournament:latest
-    env_file: ./deploy/envs/tournament
-    ports:
-      - "127.0.0.1:${TOURNAMENT_PORT}:8080/tcp"
-  registry:
-    image: registry:latest
-    env_file: ./deploy/envs/registry
-    ports:
-      - "127.0.0.1:${REGISTRY_PORT}:${REGISTRY_PORT}"
+      - "127.0.0.1:${BUILDER_PORT}:8080/tcp"
     volumes:
-      - "${STORAGE_BASE}/registry:/var/lib/registry"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./deploy/envs/builder:/app/.env:ro"
+      - "${STORAGE_BASE}/builder:/app/output"
   ${DB_HOST}:
     image: alpine/socat:latest
     command: tcp-listen:${DB_PORT},fork,reuseaddr tcp:${WEB_ADDR}:${DB_PORT}
+    networks:
+      db-builder:
+        aliases:
+          - ${DB_HOST}
+      db-runner:
+        aliases:
+          - ${DB_HOST}
+      default:
+  game_server:
+    image: siggame/cerveau:arena
+    volumes:
+      - "${STORAGE_BASE}/game_server:/usr/src/app/game_server/output/gamelogs"
+    networks:
+      game-play:
+        aliases:
+          - ${GAME_SERVER_HOST}
+  matchmaker:
+    image: siggame/colisee-matchmaker:latest
+    ports:
+      - "127.0.0.1:${MATCHMAKER_PORT}:8080/tcp"
+    read_only: true
+    volumes:
+      - "./deploy/envs/matchmaker:/app/.env:ro"
+  registry:
+    image: registry:latest
+    env_file: ./deploy/envs/registry
+    networks:
+      client-registry:
+        aliases:
+          - ${REGISTRY_HOST}
+    volumes:
+      - "${STORAGE_BASE}/registry:/var/lib/registry"
   reverse_proxy:
     build:
       context: ./deploy/nginx
+    networks:
+      ingress:
     ports:
-      - 80:80
-      # - 443:443
-    # volumes:
-      # - "./deploy/letsencrypt/certs:/etc/letsencrypt:ro"
-      # - "./deploy/letsencrypt/certs-data:/data/letsencrypt:ro"
+      - "0.0.0.0:80:80/tcp"
+  runner:
+    image: siggame/colisee-runner:latest
+    networks:
+      db-runner:
+      game-play:
+      runner-docker:
+        aliases:
+          - ${RUNNER_HOST}
+    ports:
+      - "127.0.0.1:${RUNNER_PORT}:8080/tcp"
+    volumes:
+      - "./deploy/envs/runner:/app/.env:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "${STORAGE_BASE}/runner:/app/output"
+  secure-build:
+    image: siggame/colisee-docker:secure-build
+    networks:
+      builder-docker:
+        aliases:
+          - ${DOCKER_HOST}
+      client-registry:
+      default:
+    privileged: true
+    volumes:
+      - "./deploy/envs/secure-build:/tmp/.env:ro"
+  secure-runtime:
+    image: siggame/colisee-docker:secure-runtime
+    networks:
+      client-registry:
+      game-play:
+      runner-docker:
+        aliases:
+          - ${DOCKER_HOST}
+    privileged: true
+    volumes:
+      - "./deploy/envs/secure-runtime:/tmp/.env:ro"
+  tournament:
+    image: siggame/colisee-tournament:latest
+    ports:
+      - "127.0.0.1:${TOURNAMENT_PORT}:8080/tcp"
+    read_only: true
+    volumes:
+      - "./deploy/envs/tournament:/app/.env:ro"
+
 networks:
-  ${GAME_SERVER_NETWORK}:
+  builder-docker:
     internal: true
+    driver_opts:
+      com.docker.network.bridge.name: build
+  client-registry:
+    internal: true
+    driver_opts:
+      com.docker.network.bridge.name: reg
+  db-builder:
+    internal: true
+    driver_opts:
+      com.docker.network.bridge.name: dbbuild
+  db-runner:
+    internal: true
+    driver_opts:
+      com.docker.network.bridge.name: dbrun
+  default:
+  game-play:
+    internal: true
+    driver_opts:
+      com.docker.network.bridge.name: game
+  ingress:
+    driver_opts:
+      com.docker.network.bridge.name: ingress
+  runner-docker:
+    internal: true
+    driver_opts:
+      com.docker.network.bridge.name: run
