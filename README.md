@@ -28,8 +28,8 @@ The story board for colisee can be found [here](https://github.com/orgs/siggame/
 |[siggame/colisee-matchmaker](https://github.com/siggame/colisee-matchmaker)|Service which schedules random games to play.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-matchmaker.svg?style=flat-square)](http://github.com/siggame/colisee-matchmaker)|[![Travis](https://img.shields.io/travis/siggame/colisee-matchmaker.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-matchmaker)|
 |[siggame/colisee-tournament](https://github.com/siggame/colisee-tournament)|Service which schedules game in a tournament fashion.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-tournament.svg?style=flat-square)](http://github.com/siggame/colisee-tournament)|[![Travis](https://img.shields.io/travis/siggame/colisee-tournament.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-tournament)|
 |[siggame/colisee-runner](https://github.com/siggame/colisee-runner)|Service which dequeues scheduled games off the database and plays them.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-runner.svg?style=flat-square)](http://github.com/siggame/colisee-runner)|[![Travis](https://img.shields.io/travis/siggame/colisee-runner.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-runner)|
-|[siggame/colisee-visapi](https://github.com/siggame/colisee-visapi)|Service that provides endpoints to interact with the SIG-Game visualizer.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-visapi.svg?style=flat-square)](http://github.com/siggame/colisee-visapi)|[![Travis](https://img.shields.io/travis/siggame/colisee-visapi.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-visapi)|
-|[siggame/registre](https://github.com/siggame/registre)|Simple web application that records registration data in a simple CSV format.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/registre.svg?style=flat-square)](http://github.com/siggame/registre)|[![Travis](https://img.shields.io/travis/siggame/colisee-registre.svg?style=flat-square)](https://travis-ci.org/siggame/registre)|
+|[siggame/colisee-api](https://github.com/siggame/colisee-api)|Service that provides endpoints to internal colisee resources.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/colisee-api.svg?style=flat-square)](http://github.com/siggame/colisee-api)|[![Travis](https://img.shields.io/travis/siggame/colisee-api.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-api)|
+|[siggame/colisee-docker](https://github.com/siggame/colisee-docker)|Docker in docker secure build and runtime.|[![Open Issues](https://img.shields.io/github/issues-raw/siggame/registre.svg?style=flat-square)](http://github.com/siggame/registre)|[![Travis](https://img.shields.io/travis/siggame/colisee-docker.svg?style=flat-square)](https://travis-ci.org/siggame/colisee-docker)|
 
 ### Libraries
 
@@ -46,6 +46,7 @@ The story board for colisee can be found [here](https://github.com/orgs/siggame/
 - [user404d](https://github.com/user404d)
 - [Hannah Reinbolt](https://github.com/LoneGalaxy)
 - [Matthew Qualls](https://github.com/MatthewQualls)
+- [Dylan Warren](https://github.com/Uhuh)
 
 ## Change Log
 
@@ -53,7 +54,7 @@ This repo does not have a specific change log as it is a living document. Please
 
 ## License
 
-View our [LICENSE](https://github.com/siggame/colisee/blob/master/LICENSE)
+View our [LICENSE](LICENSE)
 
 ## Contributing
 
